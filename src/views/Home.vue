@@ -607,8 +607,12 @@
         <div class="relative overflow-hidden bg-slate-700/50 backdrop-blur-sm rounded-3xl shadow-xl p-6 border border-slate-600">
           <div class="flex animate-scroll">
             <div v-for="i in 2" :key="i" class="flex gap-8 px-4">
-              <div v-for="client in clients" :key="`${i}-${client}`" class="flex-shrink-0 bg-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600 hover:shadow-xl hover:border-cyan-500/50 transition-all w-40 h-24 flex items-center justify-center group">
-                <span class="text-lg font-bold text-slate-300 group-hover:text-cyan-400 transition-colors">{{ client }}</span>
+              <div v-for="client in clients" :key="`${i}-${client.name}`" class="flex-shrink-0 bg-slate-700/50 backdrop-blur-sm rounded-xl p-4 border border-slate-600 hover:shadow-xl hover:border-cyan-500/50 transition-all w-40 h-24 flex items-center justify-center group">
+                <img 
+                  :src="client.src" 
+                  :alt="client.name + ' Logo'"
+                  class="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                />
               </div>
             </div>
           </div>
@@ -729,24 +733,39 @@
 </template>
 
 <script>
+// Import all client logos statically
+import fordLogo from '../assets/ford.jpg'
+import gestampLogo from '../assets/Gestamp.svg'
+import geLogo from '../assets/general-electric.png'
+import apolloLogo from '../assets/ApolloLogo.jpg'
+import heatControlLogo from '../assets/HeatAndControlLogo.png'
+import tennecoLogo from '../assets/tenneco.png'
+import mrfLogo from '../assets/mrf.png'
+import nissanLogo from '../assets/nissan.jpg'
+import jaiLogo from '../assets/JAI Logo.png'
+import salcompLogo from '../assets/salcomp logo.png'
+import reepLogo from '../assets/REEP-MOTORS-LOGO.png'
+import unipresLogo from '../assets/unipres-logo.png'
+import forceMotorsLogo from '../assets/forcemotors.jpg'
+
 export default {
   name: 'Home',
   data() {
     return {
       clients: [
-        'Ford',
-        'Gestamp',
-        'GE',
-        'Apollo',
-        'Nissan',
-        'MRF',
-        'Tenneco',
-        'Heat & Control',
-        'JAI',
-        'Salcomp',
-        'Reep Industries',
-        'Unipres',
-        'Force Motors'
+        { name: 'Ford', src: fordLogo },
+        { name: 'Gestamp', src: gestampLogo },
+        { name: 'GE', src: geLogo },
+        { name: 'Apollo', src: apolloLogo },
+        { name: 'Nissan', src: nissanLogo },
+        { name: 'MRF', src: mrfLogo },
+        { name: 'Tenneco', src: tennecoLogo },
+        { name: 'Heat & Control', src: heatControlLogo },
+        { name: 'JAI', src: jaiLogo },
+        { name: 'Salcomp', src: salcompLogo },
+        { name: 'Reep Industries', src: reepLogo },
+        { name: 'Unipres', src: unipresLogo },
+        { name: 'Force Motors', src: forceMotorsLogo }
       ]
     }
   }

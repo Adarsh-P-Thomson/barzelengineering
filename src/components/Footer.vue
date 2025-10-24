@@ -84,10 +84,7 @@
               <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
-              <div>
-                <a href="tel:+919940016330" class="hover:text-cyan-400 transition-colors block">+91 99400 16330</a>
-                <a href="tel:+917760990196" class="hover:text-cyan-400 transition-colors block">+91 77609 90196</a>
-              </div>
+              <a href="tel:+919940016330" class="hover:text-cyan-400 transition-colors">+91 99400 16330</a>
             </li>
             <li class="pt-2">
               <router-link to="/contact" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-semibold group">

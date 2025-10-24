@@ -104,11 +104,28 @@
 
           <!-- Client Grid -->
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-            <div v-for="client in clients" :key="client" 
+            <div v-for="client in clients" :key="client.name" 
                  class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg md:rounded-xl p-4 md:p-6 hover:bg-gradient-to-br hover:from-cyan-500/10 hover:to-blue-500/10 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1">
-              <div class="flex items-center justify-center h-16 md:h-20">
-                <h3 class="text-base md:text-xl font-bold text-slate-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all text-center leading-tight">
-                  {{ client }}
+              <div class="flex flex-col items-center justify-center h-20 md:h-24 space-y-3">
+                <!-- Logo Image -->
+                <div v-if="client.src" class="w-full h-12 md:h-16 flex items-center justify-center">
+                  <img 
+                    :src="client.src" 
+                    :alt="client.name + ' Logo'"
+                    class="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                  />
+                </div>
+                <!-- Fallback for clients without logos -->
+                <div v-else class="w-full h-12 md:h-16 flex items-center justify-center">
+                  <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
+                    <svg class="w-5 h-5 md:w-6 md:h-6 text-slate-400 group-hover:text-cyan-400 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                </div>
+                <!-- Client Name -->
+                <h3 class="text-sm md:text-base font-bold text-slate-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all text-center leading-tight">
+                  {{ client.name }}
                 </h3>
               </div>
             </div>
@@ -257,23 +274,40 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue'
+
+// Import all client logos statically
+import fordLogo from '../assets/ford.jpg'
+import gestampLogo from '../assets/Gestamp.svg'
+import geLogo from '../assets/general-electric.png'
+import apolloLogo from '../assets/ApolloLogo.jpg'
+import heatControlLogo from '../assets/HeatAndControlLogo.png'
+import tennecoLogo from '../assets/tenneco.png'
+import mrfLogo from '../assets/mrf.png'
+import nissanLogo from '../assets/nissan.jpg'
+import jaiLogo from '../assets/JAI Logo.png'
+import salcompLogo from '../assets/salcomp logo.png'
+import reepLogo from '../assets/REEP-MOTORS-LOGO.png'
+import unipresLogo from '../assets/unipres-logo.png'
+import forceMotorsLogo from '../assets/forcemotors.jpg'
+
 export default {
   name: 'Clients',
   setup() {
     const clients = [
-      'Ford',
-      'Gestamp',
-      'GE',
-      'Apollo',
-      'Heat and Control',
-      'Tenneco',
-      'MRF',
-      'Nissan',
-      'JAI',
-      'Salcomp',
-      'Reep Industries',
-      'Unipres',
-      'Force Motors'
+      { name: 'Ford', logo: 'ford.jpg', src: fordLogo },
+      { name: 'Gestamp', logo: 'Gestamp.svg', src: gestampLogo },
+      { name: 'GE', logo: 'general-electric.png', src: geLogo },
+      { name: 'Apollo', logo: 'ApolloLogo.jpg', src: apolloLogo },
+      { name: 'Heat and Control', logo: 'HeatAndControlLogo.png', src: heatControlLogo },
+      { name: 'Tenneco', logo: 'tenneco.png', src: tennecoLogo },
+      { name: 'MRF', logo: 'mrf.png', src: mrfLogo },
+      { name: 'Nissan', logo: 'nissan.jpg', src: nissanLogo },
+      { name: 'JAI', logo: 'JAI Logo.png', src: jaiLogo },
+      { name: 'Salcomp', logo: 'salcomp logo.png', src: salcompLogo },
+      { name: 'Reep Industries', logo: 'REEP-MOTORS-LOGO.png', src: reepLogo },
+      { name: 'Unipres', logo: 'unipres-logo.png', src: unipresLogo },
+      { name: 'Force Motors', logo: 'forcemotors.jpg', src: forceMotorsLogo }
     ]
 
     const regions = [
