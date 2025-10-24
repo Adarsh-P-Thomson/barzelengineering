@@ -42,44 +42,59 @@
     <section class="py-16 md:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 md:mb-12 text-center">Explore Our Core Capabilities</h2>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 md:mb-8 text-center">Explore Our Core Capabilities</h2>
+          <p class="text-base md:text-lg text-slate-400 text-center mb-10 md:mb-12 max-w-2xl mx-auto">
+            Click on any service below to learn more about our specialized solutions
+          </p>
           
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <!-- Card 1 -->
             <div 
               @click="scrollToSection('automotive')"
-              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-2"
+              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-2 hover:bg-slate-800/70"
             >
-              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-400 group-hover:to-blue-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-cyan-500/30">
+              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-400 group-hover:to-blue-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-cyan-500/30 group-hover:scale-110">
                 <svg class="w-7 h-7 md:w-8 md:h-8 text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
                   <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
                 </svg>
               </div>
-              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors group-hover:text-cyan-300">
                 Customized Automotive Solutions
               </h3>
-              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors">
+              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors mb-3">
                 Tailored pallets, skids, and transportation solutions for the automotive industry.
               </p>
+              <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                <span class="text-sm font-medium">Learn More</span>
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </div>
             </div>
 
             <!-- Card 2 -->
             <div 
               @click="scrollToSection('utility')"
-              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-2"
+              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-2 hover:bg-slate-800/70"
             >
-              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-indigo-500 group-hover:from-blue-400 group-hover:to-indigo-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-blue-500/30">
+              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-indigo-500 group-hover:from-blue-400 group-hover:to-indigo-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-blue-500/30 group-hover:scale-110">
                 <svg class="w-7 h-7 md:w-8 md:h-8 text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
                 </svg>
               </div>
-              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors group-hover:text-blue-300">
                 Installation & Utility Systems
               </h3>
-              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors">
+              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors mb-3">
                 Expert installation of fuel pipelines, compressed air lines, and utility systems.
               </p>
+              <div class="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
+                <span class="text-sm font-medium">Learn More</span>
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </div>
             </div>
 
             <!-- Card 3 -->
@@ -95,45 +110,63 @@
               <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors">
                 Design, Manufacture & Fabrication
               </h3>
-              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors">
+              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors mb-3">
                 High-quality SS & MS fabrications, trolleys, and industrial structures.
               </p>
+              <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                <span class="text-sm font-medium">Learn More</span>
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </div>
             </div>
 
             <!-- Card 4 -->
             <div 
               @click="scrollToSection('spm')"
-              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-2"
+              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-2 hover:bg-slate-800/70"
             >
-              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-indigo-500 group-hover:from-blue-400 group-hover:to-indigo-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-blue-500/30">
+              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-indigo-500 group-hover:from-blue-400 group-hover:to-indigo-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-blue-500/30 group-hover:scale-110">
                 <svg class="w-7 h-7 md:w-8 md:h-8 text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
                 </svg>
               </div>
-              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors group-hover:text-blue-300">
                 Special Purpose Machines (SPMs)
               </h3>
-              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors">
+              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors mb-3">
                 Custom machines, jigs, and fixtures designed for specific operations.
               </p>
+              <div class="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
+                <span class="text-sm font-medium">Learn More</span>
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </div>
             </div>
 
             <!-- Card 5 -->
             <div 
               @click="scrollToSection('plants')"
-              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-2 sm:col-span-2 lg:col-span-1"
+              class="group cursor-pointer bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 md:p-8 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-2 hover:bg-slate-800/70 sm:col-span-2 lg:col-span-1"
             >
-              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-400 group-hover:to-blue-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-cyan-500/30">
+              <div class="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-400 group-hover:to-blue-400 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all shadow-lg shadow-cyan-500/30 group-hover:scale-110">
                 <svg class="w-7 h-7 md:w-8 md:h-8 text-white transition-colors" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
                 </svg>
               </div>
-              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors group-hover:text-cyan-300">
                 Industrial Plants & Shop Support
               </h3>
-              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors">
+              <p class="text-sm md:text-base text-slate-300 group-hover:text-slate-200 transition-colors mb-3">
                 Plant setup, commissioning, and comprehensive production support.
               </p>
+              <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                <span class="text-sm font-medium">Learn More</span>
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

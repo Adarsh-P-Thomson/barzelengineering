@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen overflow-x-hidden">
     <!-- Hero Section: The Hook -->
     <section class="relative h-screen min-h-[700px] overflow-hidden">
       <!-- Background Image -->
@@ -25,8 +25,8 @@
         </div>
 
         <!-- Gradient Orbs -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
       </div>
 
       <!-- Hero Content -->
@@ -47,7 +47,7 @@
           
           <!-- Quick Contact Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <!-- Mobile: Show only Call and Contact Us -->
+            <!-- Mobile: Show Call Now, Email Us, and Our Work -->
             <div class="flex flex-col sm:hidden gap-4">
               <a 
                 href="tel:+919845065065" 
@@ -58,15 +58,26 @@
                 </svg>
                 <span>Call Now</span>
               </a>
-              <router-link 
-                to="/contact" 
-                class="inline-flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyan-500/50"
+              <a 
+                href="mailto:info@barzelengineering.com" 
+                class="inline-flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-blue-500/50"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
-                <span>Get Free Quote</span>
-              </router-link>
+                <span>Email Us</span>
+              </a>
+              <button 
+                @click="scrollToSection('our-work')"
+                class="inline-flex items-center justify-center gap-3 px-6 py-3 bg-transparent border-2 border-slate-400 text-slate-300 font-bold text-lg rounded-xl hover:border-white hover:text-white transition-all duration-300 shadow-xl"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Our Work</span>
+              </button>
             </div>
 
             <!-- Desktop: Show all three buttons -->
@@ -104,9 +115,10 @@
 
           <!-- Secondary Action Buttons -->
           <div class="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center">
+            <!-- Desktop only: Our Services button -->
             <button 
               @click="scrollToSection('services')"
-              class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold text-base rounded-xl hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl"
+              class="hidden sm:inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold text-base rounded-xl hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl"
             >
               <span>Our Services</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -139,8 +151,8 @@
     <!-- Core Services Section -->
     <section id="services" class="py-20 bg-slate-900 relative overflow-hidden">
       <!-- Background Decoration -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
@@ -239,8 +251,8 @@
       </div>
 
       <!-- Gradient Orbs -->
-      <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute top-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
@@ -393,8 +405,8 @@
     <!-- Advanced Machinery & Technology Section -->
     <section id="technology" class="py-20 bg-slate-900 relative overflow-hidden">
       <!-- Background Decoration -->
-      <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-12">
@@ -532,8 +544,8 @@
       </div>
 
       <!-- Gradient Orbs -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
@@ -667,8 +679,8 @@
       </div>
 
       <!-- Gradient Orbs -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute top-0 right-0 w-48 h-48 sm:w-96 sm:h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-48 h-48 sm:w-96 sm:h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
 
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-5xl mx-auto text-center">
