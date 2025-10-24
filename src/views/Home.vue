@@ -43,8 +43,11 @@
           <p class="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-bold mb-6">
             Customize & Creative Packaging Solution
           </p>
-          <p class="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed max-w-3xl">
+          <p class="text-xl md:text-2xl text-slate-300 mb-6 leading-relaxed max-w-3xl">
             Precision Fabrication for the Automotive, Railway, and Mining Industries.
+          </p>
+          <p class="text-lg text-slate-400 mb-10 leading-relaxed max-w-3xl">
+            From concept to completion, we transform your toughest engineering challenges into reliable, high-performance solutions. With 25,000 sqft of advanced manufacturing capability and decades of industry expertise, we're the partner that delivers.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <router-link 
@@ -92,6 +95,9 @@
           <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
             Our Core <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Capabilities</span>
           </h2>
+          <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Comprehensive solutions designed to solve your most complex manufacturing challenges with precision and reliability.
+          </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
@@ -163,6 +169,119 @@
       </div>
     </section>
 
+    <!-- Why Partner With Us Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white relative overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-5">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="partner-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="white"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#partner-grid)" />
+        </svg>
+      </div>
+
+      <!-- Gradient Orbs -->
+      <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <div class="inline-block px-4 py-2 bg-cyan-500/20 backdrop-blur-sm border border-cyan-400/30 rounded-full mb-4">
+            <span class="text-cyan-400 font-semibold text-sm tracking-wider uppercase">Partnership Value</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Why Industry Leaders <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Choose Us</span>
+          </h2>
+          <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+            We don't just manufacture—we become an extension of your engineering team, committed to your success.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <!-- Value 1 -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all hover:transform hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/50">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Custom Engineering</h3>
+            <p class="text-slate-300 leading-relaxed mb-4">
+              Every project is unique. Our in-house design team collaborates with you from concept to completion, ensuring solutions that perfectly match your specifications.
+            </p>
+            <div class="flex items-center text-cyan-400 font-semibold">
+              <span>Tailored to your needs</span>
+              <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all hover:transform hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/50">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Quality Assurance</h3>
+            <p class="text-slate-300 leading-relaxed mb-4">
+              ISO-grade precision with rigorous quality control at every stage. We deliver solutions that meet the highest industry standards and exceed expectations.
+            </p>
+            <div class="flex items-center text-cyan-400 font-semibold">
+              <span>Zero-compromise quality</span>
+              <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all hover:transform hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/50">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">On-Time Delivery</h3>
+            <p class="text-slate-300 leading-relaxed mb-4">
+              Your timelines are our priority. With optimized workflows and efficient project management, we ensure your projects stay on schedule without sacrificing quality.
+            </p>
+            <div class="flex items-center text-cyan-400 font-semibold">
+              <span>Reliable partnerships</span>
+              <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">25K+</div>
+            <div class="text-slate-300 font-semibold">sqft Facility</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">500+</div>
+            <div class="text-slate-300 font-semibold">Projects Delivered</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">15+</div>
+            <div class="text-slate-300 font-semibold">Industry Leaders</div>
+          </div>
+          <div class="text-center">
+            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">100%</div>
+            <div class="text-slate-300 font-semibold">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- About Us Snippet Section -->
     <section class="py-20 bg-gradient-to-br from-slate-50 to-cyan-50/30">
       <div class="container mx-auto px-4">
@@ -209,6 +328,236 @@
                 </svg>
               </router-link>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced Machinery & Technology Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+      <!-- Background Decoration -->
+      <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-50 rounded-full blur-3xl opacity-50"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <div class="inline-block px-4 py-2 bg-cyan-50 rounded-full mb-4">
+            <span class="text-cyan-600 font-semibold text-sm tracking-wider uppercase">Our Technology</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            State-of-the-Art <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Manufacturing</span>
+          </h2>
+          <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+            Equipped with cutting-edge machinery and technology to deliver precision, efficiency, and excellence in every project.
+          </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+          <!-- Main Featured Machine -->
+          <div class="mb-12 bg-gradient-to-br from-slate-50 to-cyan-50 rounded-3xl overflow-hidden border-2 border-slate-200 hover:border-cyan-300 transition-all shadow-xl">
+            <div class="grid md:grid-cols-2 gap-0">
+              <div class="relative h-80 md:h-auto overflow-hidden">
+                <img 
+                  src="../assets/lasercutting.png" 
+                  alt="Laser Cutting Machine" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+                <div class="absolute top-4 right-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  Precision Technology
+                </div>
+              </div>
+              <div class="p-8 md:p-12 flex flex-col justify-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
+                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-3xl font-bold text-slate-800 mb-4">Laser Cutting Technology</h3>
+                <p class="text-lg text-slate-600 leading-relaxed mb-4">
+                  Our advanced laser cutting systems deliver micron-level precision for complex geometries and intricate designs. Perfect for both prototypes and high-volume production.
+                </p>
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-slate-700">High-speed cutting with minimal material waste</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-slate-700">Handles various materials: steel, aluminum, stainless steel</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-slate-700">CAD/CAM integration for seamless design-to-production</span>
+                  </li>
+                </ul>
+                <div class="inline-flex items-center text-cyan-600 font-semibold">
+                  <span>Learn more about our capabilities</span>
+                  <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Machine Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Machine Card 1 -->
+            <div class="group bg-gradient-to-br from-slate-50 to-cyan-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-300 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-56 overflow-hidden">
+                <img 
+                  src="../assets/weldingmachine.jpg" 
+                  alt="Welding Equipment" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-6">
+                  <h3 class="text-xl font-bold text-white">Advanced Welding</h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600 mb-4">
+                  TIG, MIG, and ARC welding capabilities for robust, high-strength joints across all material types.
+                </p>
+                <div class="flex items-center text-cyan-600 font-semibold text-sm">
+                  <span>Multi-process capability</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 2 -->
+            <div class="group bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-blue-300 transition-all hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
+              <div class="relative h-56 overflow-hidden">
+                <img 
+                  src="../assets/drillingmachine.png" 
+                  alt="CNC Drilling Machine" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-6">
+                  <h3 class="text-xl font-bold text-white">CNC Drilling</h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600 mb-4">
+                  Computer-controlled precision drilling for accurate hole placement and consistent quality at scale.
+                </p>
+                <div class="flex items-center text-blue-600 font-semibold text-sm">
+                  <span>Automated precision</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 3 -->
+            <div class="group bg-gradient-to-br from-slate-50 to-cyan-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-300 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-56 overflow-hidden">
+                <img 
+                  src="../assets/bandshawmachine.jpg" 
+                  alt="Band Saw Machine" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-6">
+                  <h3 class="text-xl font-bold text-white">Band Saw Cutting</h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600 mb-4">
+                  High-capacity cutting systems for efficient material processing with clean, accurate cuts.
+                </p>
+                <div class="flex items-center text-cyan-600 font-semibold text-sm">
+                  <span>Heavy-duty performance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 4 -->
+            <div class="group bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-blue-300 transition-all hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
+              <div class="relative h-56 overflow-hidden">
+                <img 
+                  src="../assets/powdercoatingbooth.jpg" 
+                  alt="Powder Coating Booth" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-6">
+                  <h3 class="text-xl font-bold text-white">Powder Coating</h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600 mb-4">
+                  Professional finishing services with durable, corrosion-resistant powder coating in various colors.
+                </p>
+                <div class="flex items-center text-blue-600 font-semibold text-sm">
+                  <span>Superior finishes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 5 -->
+            <div class="group bg-gradient-to-br from-slate-50 to-cyan-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-300 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-56 overflow-hidden">
+                <img 
+                  src="../assets/compressormachine.png" 
+                  alt="Compressor Systems" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-6">
+                  <h3 class="text-xl font-bold text-white">Air Systems</h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600 mb-4">
+                  Industrial-grade compressor systems powering pneumatic tools for consistent, reliable operations.
+                </p>
+                <div class="flex items-center text-cyan-600 font-semibold text-sm">
+                  <span>Uninterrupted power</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 6 -->
+            <div class="group bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-blue-300 transition-all hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
+              <div class="relative h-56 overflow-hidden">
+                <img 
+                  src="../assets/shopfloormachinery.png" 
+                  alt="Shop Floor Machinery" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-6">
+                  <h3 class="text-xl font-bold text-white">Complete Shop Floor</h3>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600 mb-4">
+                  Comprehensive manufacturing setup with material handling, assembly, and quality control systems.
+                </p>
+                <div class="flex items-center text-blue-600 font-semibold text-sm">
+                  <span>End-to-end capability</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-12 text-center bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 rounded-3xl p-12">
+            <h3 class="text-3xl font-bold text-white mb-4">
+              Want to See Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Facility?</span>
+            </h3>
+            <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+              Schedule a visit to witness our manufacturing capabilities firsthand and discuss how we can bring your project to life.
+            </p>
+            <router-link 
+              to="/contact" 
+              class="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/50"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Schedule a Facility Tour</span>
+            </router-link>
           </div>
         </div>
       </div>
@@ -308,6 +657,119 @@
       </div>
     </section>
 
+    <!-- How We Work Process Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+      <!-- Background Decoration -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-50 rounded-full blur-3xl opacity-50"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+          <div class="inline-block px-4 py-2 bg-cyan-50 rounded-full mb-4">
+            <span class="text-cyan-600 font-semibold text-sm tracking-wider uppercase">Our Process</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            From Concept to <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Completion</span>
+          </h2>
+          <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+            A proven, collaborative approach that ensures your vision becomes reality—on time, on budget, and beyond expectations.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+          <!-- Process Timeline -->
+          <div class="relative">
+            <!-- Connecting Line -->
+            <div class="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 opacity-20"></div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+              <!-- Step 1 -->
+              <div class="relative group">
+                <div class="flex flex-col items-center text-center">
+                  <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-cyan-500/40 relative z-10 group-hover:scale-110 transition-transform">
+                    <span class="text-3xl font-bold text-white">1</span>
+                  </div>
+                  <div class="bg-gradient-to-br from-slate-50 to-cyan-50 rounded-2xl p-6 border-2 border-slate-200 group-hover:border-cyan-300 transition-all group-hover:shadow-xl h-full">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto shadow-lg shadow-cyan-500/30">
+                      <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Discovery</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                      We dive deep into your requirements, challenges, and goals to fully understand your needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="relative group">
+                <div class="flex flex-col items-center text-center">
+                  <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-blue-500/40 relative z-10 group-hover:scale-110 transition-transform">
+                    <span class="text-3xl font-bold text-white">2</span>
+                  </div>
+                  <div class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 border-2 border-slate-200 group-hover:border-blue-300 transition-all group-hover:shadow-xl h-full">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4 mx-auto shadow-lg shadow-blue-500/30">
+                      <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Design</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                      Our expert team creates detailed designs and prototypes, collaborating with you at every stage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="relative group">
+                <div class="flex flex-col items-center text-center">
+                  <div class="w-20 h-20 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-cyan-500/40 relative z-10 group-hover:scale-110 transition-transform">
+                    <span class="text-3xl font-bold text-white">3</span>
+                  </div>
+                  <div class="bg-gradient-to-br from-slate-50 to-cyan-50 rounded-2xl p-6 border-2 border-slate-200 group-hover:border-cyan-300 transition-all group-hover:shadow-xl h-full">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-lg flex items-center justify-center mb-4 mx-auto shadow-lg shadow-cyan-500/30">
+                      <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Production</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                      Advanced machinery and skilled craftsmen bring your project to life with precision manufacturing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="relative group">
+                <div class="flex flex-col items-center text-center">
+                  <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-blue-500/40 relative z-10 group-hover:scale-110 transition-transform">
+                    <span class="text-3xl font-bold text-white">4</span>
+                  </div>
+                  <div class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 border-2 border-slate-200 group-hover:border-blue-300 transition-all group-hover:shadow-xl h-full">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center mb-4 mx-auto shadow-lg shadow-blue-500/30">
+                      <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Delivery</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                      Rigorous quality checks, on-time delivery, and ongoing support to ensure complete satisfaction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Client Trust Wall Section -->
     <section class="py-20 bg-gradient-to-br from-slate-50 to-cyan-50/30">
       <div class="container mx-auto px-4">
@@ -318,6 +780,9 @@
           <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
             Trusted by <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Industry Leaders</span>
           </h2>
+          <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+            We're proud to partner with some of the world's most respected brands in automotive, manufacturing, and industrial sectors.
+          </p>
         </div>
 
         <!-- Client Logos Marquee -->
@@ -364,28 +829,81 @@
       <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-5xl mx-auto text-center">
           <div class="inline-block p-4 bg-cyan-500/20 backdrop-blur-sm rounded-full mb-6 border border-cyan-400/30">
             <svg class="w-16 h-16 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">
-            Have a <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Complex Project?</span>
+          <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Turn Your Vision Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Reality</span>
           </h2>
-          <p class="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed">
-            We have the design expertise and fabrication power to build it.
+          <p class="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
+            Whether you need custom automotive solutions, heavy fabrication, or specialized equipment—we have the expertise, technology, and dedication to deliver exceptional results.
           </p>
-          <router-link 
-            to="/contact" 
-            class="inline-flex items-center gap-3 px-12 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-xl rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyan-500/50"
-          >
-            <span>Contact Us for a Quote</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-            </svg>
-          </router-link>
+          
+          <!-- Value Props -->
+          <div class="grid md:grid-cols-3 gap-6 mb-10 text-left">
+            <div class="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div class="flex-shrink-0 w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Free Consultation</h4>
+                <p class="text-sm text-slate-300">Expert guidance at no cost</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div class="flex-shrink-0 w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Fast Turnaround</h4>
+                <p class="text-sm text-slate-300">Quick quotes & delivery</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div class="flex-shrink-0 w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Quality Guaranteed</h4>
+                <p class="text-sm text-slate-300">100% satisfaction promise</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <router-link 
+              to="/contact" 
+              class="inline-flex items-center justify-center gap-3 px-12 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-xl rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyan-500/50"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span>Get Your Free Quote</span>
+            </router-link>
+            <router-link 
+              to="/our-work" 
+              class="inline-flex items-center justify-center gap-3 px-12 py-5 bg-white text-slate-900 font-bold text-xl rounded-xl hover:bg-slate-100 transition-all shadow-xl"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+              </svg>
+              <span>View Our Portfolio</span>
+            </router-link>
+          </div>
+
+          <p class="text-slate-400 mt-8 text-sm">
+            Join 15+ industry leaders who trust Barzel Engineering for their critical manufacturing needs
+          </p>
         </div>
       </div>
     </section>

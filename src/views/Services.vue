@@ -5,7 +5,7 @@
       <!-- Background Image -->
       <div class="absolute inset-0">
         <img 
-          src="../assets/cncbendingmachine.jpg" 
+          src="../assets/clientspagebg.jpg" 
           alt="Manufacturing Machinery" 
           class="w-full h-full object-cover object-center"
         />

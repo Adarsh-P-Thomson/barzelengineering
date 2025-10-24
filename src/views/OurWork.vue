@@ -289,14 +289,14 @@
               class="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer bg-slate-800"
             >
               <img 
-                src="../assets/cncbendingmachine.jpg" 
-                alt="CNC Bending Machine"
+                src="../assets/multicutmachine.jpg" 
+                alt="Multi Cut Machine"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent">
                 <div class="absolute bottom-6 left-6 right-6">
-                  <h3 class="text-2xl font-bold text-white mb-2">CNC Press Brake</h3>
-                  <p class="text-slate-300">Advanced precision bending technology</p>
+                  <h3 class="text-2xl font-bold text-white mb-2">Multi Cut Machine</h3>
+                  <p class="text-slate-300">Advanced precision cutting technology</p>
                 </div>
               </div>
               <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400 rounded-2xl transition-colors duration-300"></div>
@@ -462,7 +462,7 @@ export default {
     ])
 
     const facilityImages = ref([
-      'manufacturingunit.jpg', 'cncbendingmachine.jpg',
+      'manufacturingunit.jpg', 'multicutmachine.jpg',
       'bandshawmachine.jpg', 'compressormachine.png', 'drillingmachine.png'
     ])
 
