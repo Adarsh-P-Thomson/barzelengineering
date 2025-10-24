@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen bg-slate-50">
+  <div class="min-h-screen bg-slate-900">
     <!-- Hero Section -->
-    <div class="relative h-[75vh] min-h-[600px] overflow-hidden">
+    <div class="relative h-[70vh] min-h-[600px] overflow-hidden">
       <!-- Background Image -->
       <div class="absolute inset-0">
         <img 
@@ -10,98 +10,158 @@
           class="w-full h-full object-cover object-center"
         />
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-cyan-900/85"></div>
-        
-        <!-- Animated Grid Pattern -->
-        <div class="absolute inset-0 opacity-10">
-          <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="hero-grid" width="50" height="50" patternUnits="userSpaceOnUse">
-                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="white" stroke-width="1"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#hero-grid)" />
-          </svg>
-        </div>
-
-        <!-- Gradient Orbs -->
-        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-cyan-900/80"></div>
       </div>
 
       <!-- Hero Content -->
-      <div class="relative container mx-auto px-4 h-full flex items-center">
-        <div class="max-w-5xl">
-          <div class="inline-block px-4 py-2 bg-cyan-500/20 backdrop-blur-sm border border-cyan-400/30 rounded-full mb-6">
-            <span class="text-cyan-400 font-semibold text-sm tracking-wider uppercase">Engineered Showcase</span>
-          </div>
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+      <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div class="max-w-4xl">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
             Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Work</span>
           </h1>
-          <p class="text-2xl md:text-3xl text-slate-300 mb-8 italic leading-relaxed font-light">
-            "Creativity is thinking up new things.<br />Innovation is doing new things."
+          <p class="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 md:mb-8 leading-relaxed max-w-3xl">
+            Engineering excellence through precision manufacturing, custom solutions, and innovative design.
           </p>
-          <div class="max-w-3xl">
-            <p class="text-lg text-slate-300 leading-relaxed mb-6">
-              We don't just build products; we <span class="font-semibold text-cyan-400">engineer solutions</span>. Our gallery showcases the precision, durability, and custom design that define Barzel Engineering.
-            </p>
-            <p class="text-lg text-slate-300 leading-relaxed">
-              From specialized automotive pallets and heavy-duty skids to complex SS & MS fabrications and special purpose machines, <span class="font-semibold text-cyan-400">our work is our promise of quality</span>.
-            </p>
-          </div>
-          <div class="mt-10">
-            <div class="inline-block px-6 py-3 bg-slate-800/50 backdrop-blur-sm border border-cyan-400/30 rounded-lg">
-              <span class="text-cyan-400 font-semibold tracking-wide">↓ Explore Our Capabilities Below ↓</span>
-            </div>
+          <div class="inline-block px-4 md:px-6 py-2 md:py-3 bg-slate-800/50 backdrop-blur-sm border border-cyan-400/30 rounded-lg">
+            <span class="text-cyan-400 font-medium text-sm md:text-base tracking-wide">Showcasing 25+ Years of Innovation</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Chapter 1: Automotive & Transport Solutions -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-12">
-            <div class="inline-block px-4 py-2 bg-cyan-50 rounded-full mb-4">
-              <span class="text-cyan-600 font-semibold text-sm tracking-wider uppercase">Chapter 1</span>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Automotive & <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">Transport Solutions</span>
-            </h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto">
-              Tailored pallets, skids, and transportation solutions crafted to improve efficiency for the automotive industry.
+    <!-- Machineries Section -->
+    <section class="py-16 md:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-10 md:mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 mb-4 md:mb-6">Our Manufacturing Arsenal</h2>
+            <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              State-of-the-art machinery and equipment powering precision manufacturing across our 25,000 sqft facility.
             </p>
           </div>
 
-          <!-- Featured Grid -->
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Multi Cut Machine -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div class="relative h-48 md:h-56 overflow-hidden">
+                <img 
+                  src="../assets/multicutmachine.jpg" 
+                  alt="Multi Cut Machine"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div class="p-4 md:p-6">
+                <h3 class="text-lg md:text-xl font-bold text-white mb-2">Multi Cut Machine</h3>
+                <p class="text-sm md:text-base text-slate-300">Advanced cutting technology for precision material processing</p>
+              </div>
+            </div>
+
+            <!-- Band Shaw Machine -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+              <div class="relative h-48 md:h-56 overflow-hidden">
+                <img 
+                  src="../assets/bandshawmachine.jpg" 
+                  alt="Band Shaw Machine"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div class="p-4 md:p-6">
+                <h3 class="text-lg md:text-xl font-bold text-white mb-2">Band Shaw Machine</h3>
+                <p class="text-sm md:text-base text-slate-300">High-precision band saw for efficient material cutting</p>
+              </div>
+            </div>
+
+            <!-- Drilling Machine -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 sm:col-span-2 lg:col-span-1">
+              <div class="relative h-48 md:h-56 overflow-hidden">
+                <img 
+                  src="../assets/drillingmachine.png" 
+                  alt="Drilling Machine"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+              </div>
+              <div class="p-4 md:p-6">
+                <h3 class="text-lg md:text-xl font-bold text-white mb-2">Drilling Machine</h3>
+                <p class="text-sm md:text-base text-slate-300">Industrial-grade drilling for precise hole creation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facility Overview -->
+          <div class="mt-12 md:mt-16 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 md:p-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">25,000 Sqft Manufacturing Facility</h3>
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+                  Our state-of-the-art facility houses cutting-edge machinery and skilled craftsmen, enabling us to deliver precision-engineered solutions across multiple industries.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="text-center">
+                    <div class="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">25K+</div>
+                    <div class="text-sm md:text-base text-slate-300">Sqft Facility</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1">25+</div>
+                    <div class="text-sm md:text-base text-slate-300">Years Experience</div>
+                  </div>
+                </div>
+              </div>
+              <div class="relative">
+                <img 
+                  src="../assets/manufacturingunit.jpg" 
+                  alt="Manufacturing Unit"
+                  class="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 1: Automotive & Transport Solutions -->
+    <section class="py-16 md:py-20 bg-slate-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-10 md:mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6">
+              Automotive <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Solutions</span>
+            </h2>
+            <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Custom pallets, skids, and transportation solutions engineered for automotive industry efficiency.
+            </p>
+          </div>
+
+          <!-- Simplified Grid -->
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
             <div 
               v-for="(image, index) in automotiveImages.slice(0, 8)" 
               :key="index"
               @click="openLightbox('automotive', index)"
-              class="group relative aspect-square overflow-hidden rounded-xl cursor-pointer bg-slate-200"
-              :class="index === 0 ? 'md:col-span-2 md:row-span-2' : ''"
+              class="group relative aspect-square overflow-hidden rounded-xl cursor-pointer bg-slate-800 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
+              :class="index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''"
             >
               <img 
                 :src="getImagePath(image)" 
                 :alt="`Automotive ${index + 1}`"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-4 left-4 right-4">
-                  <p class="text-white font-semibold text-sm md:text-base">Click to view gallery</p>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-3 left-3 right-3">
+                  <p class="text-white font-medium text-sm">View Gallery</p>
                 </div>
               </div>
-              <!-- Gradient border effect -->
-              <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400 rounded-xl transition-colors duration-300"></div>
             </div>
           </div>
 
-          <div class="text-center mt-8">
+          <div class="text-center">
             <button 
               @click="openLightbox('automotive', 0)"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/30"
             >
               <span>View All {{ automotiveImages.length }} Images</span>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -115,45 +175,41 @@
     </section>
 
     <!-- Chapter 2: SS & MS Fabrication -->
-    <section class="py-20 bg-slate-100">
-      <div class="container mx-auto px-4">
+    <section class="py-16 md:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-12">
-            <div class="inline-block px-4 py-2 bg-blue-50 rounded-full mb-4">
-              <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase">Chapter 2</span>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              SS & MS <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">Fabrication</span>
+          <div class="text-center mb-10 md:mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6">
+              SS & MS <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Fabrication</span>
             </h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto">
-              Precision fabrication of stainless steel and mild steel trolleys, heavy equipment, and industrial structures.
+            <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Precision fabrication of stainless steel and mild steel components for industrial applications.
             </p>
           </div>
 
-          <!-- Horizontal Filmstrip -->
-          <div class="relative">
+          <!-- Horizontal Scroll Gallery -->
+          <div class="relative mb-8">
             <div 
               ref="filmstripContainer"
-              class="flex gap-4 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory filmstrip-scrollbar"
+              class="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory filmstrip-scrollbar"
               @scroll="updateScrollButtons"
             >
               <div 
-                v-for="(image, index) in fabricationImages.slice(0, 10)" 
+                v-for="(image, index) in fabricationImages.slice(0, 8)" 
                 :key="index"
                 @click="openLightbox('fabrication', index)"
-                class="group relative flex-shrink-0 w-72 md:w-96 h-64 md:h-80 overflow-hidden rounded-xl cursor-pointer bg-slate-200 snap-start"
+                class="group relative flex-shrink-0 w-64 md:w-80 h-48 md:h-64 overflow-hidden rounded-xl cursor-pointer bg-slate-800 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 snap-start"
               >
                 <img 
                   :src="getImagePath(image)" 
                   :alt="`Fabrication ${index + 1}`"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-4 left-4 right-4">
-                    <p class="text-white font-semibold">Click to view gallery</p>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <p class="text-white font-medium text-sm">View Gallery</p>
                   </div>
                 </div>
-                <div class="absolute inset-0 border-2 border-transparent group-hover:border-blue-400 rounded-xl transition-colors duration-300"></div>
               </div>
             </div>
 
@@ -161,27 +217,27 @@
             <button 
               v-if="showScrollLeft"
               @click="scrollFilmstrip('left')"
-              class="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 backdrop-blur-sm text-white rounded-full shadow-xl hover:bg-slate-700 transition-colors z-10 flex items-center justify-center"
+              class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-slate-800/90 backdrop-blur-sm text-white rounded-full shadow-xl hover:bg-slate-700 transition-colors z-10 flex items-center justify-center border border-slate-600"
             >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
             </button>
             <button 
               v-if="showScrollRight"
               @click="scrollFilmstrip('right')"
-              class="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 backdrop-blur-sm text-white rounded-full shadow-xl hover:bg-slate-700 transition-colors z-10 flex items-center justify-center"
+              class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-slate-800/90 backdrop-blur-sm text-white rounded-full shadow-xl hover:bg-slate-700 transition-colors z-10 flex items-center justify-center border border-slate-600"
             >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
               </svg>
             </button>
           </div>
 
-          <div class="text-center mt-8">
+          <div class="text-center">
             <button 
               @click="openLightbox('fabrication', 0)"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-indigo-400 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/30"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-indigo-600 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/30"
             >
               <span>View All {{ fabricationImages.length }} Images</span>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -195,47 +251,44 @@
     </section>
 
     <!-- Chapter 3: Special Purpose Machines -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
+    <section class="py-16 md:py-20 bg-slate-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-12">
-            <div class="inline-block px-4 py-2 bg-indigo-50 rounded-full mb-4">
-              <span class="text-indigo-600 font-semibold text-sm tracking-wider uppercase">Chapter 3</span>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Special Purpose Machines <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">(SPMs) & Fixtures</span>
+          <div class="text-center mb-10 md:mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6">
+              Special Purpose <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Machines</span>
             </h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto">
-              Custom-designed jigs, fixtures, and special purpose machines built to solve unique operational challenges.
+            <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Custom jigs, fixtures, and specialized machinery designed for unique operational requirements.
             </p>
           </div>
 
-          <!-- Masonry Grid -->
-          <div class="masonry-grid">
+          <!-- Compact Grid -->
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
             <div 
-              v-for="(image, index) in spmImages.slice(0, 9)" 
+              v-for="(image, index) in spmImages.slice(0, 8)" 
               :key="index"
               @click="openLightbox('spm', index)"
-              class="group masonry-item relative overflow-hidden rounded-xl cursor-pointer bg-slate-200"
+              class="group relative aspect-square overflow-hidden rounded-xl cursor-pointer bg-slate-800 border border-slate-700 hover:border-indigo-500/50 transition-all duration-300"
+              :class="index === 0 ? 'md:col-span-2' : ''"
             >
               <img 
                 :src="getImagePath(image)" 
                 :alt="`SPM ${index + 1}`"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-4 left-4 right-4">
-                  <p class="text-white font-semibold">Click to view gallery</p>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-3 left-3 right-3">
+                  <p class="text-white font-medium text-sm">View Gallery</p>
                 </div>
               </div>
-              <div class="absolute inset-0 border-2 border-transparent group-hover:border-indigo-400 rounded-xl transition-colors duration-300"></div>
             </div>
           </div>
 
-          <div class="text-center mt-8">
+          <div class="text-center">
             <button 
               @click="openLightbox('spm', 0)"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-400 hover:to-purple-400 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-500/30"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl hover:from-indigo-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-500/30"
             >
               <span>View All {{ spmImages.length }} Images</span>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -248,110 +301,43 @@
       </div>
     </section>
 
-    <!-- Chapter 4: Facility & Capabilities -->
-    <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div class="container mx-auto px-4">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-12">
-            <div class="inline-block px-4 py-2 bg-cyan-500/20 backdrop-blur-sm border border-cyan-400/30 rounded-full mb-4">
-              <span class="text-cyan-400 font-semibold text-sm tracking-wider uppercase">Chapter 4</span>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Facility & <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Capabilities</span>
-            </h2>
-            <p class="text-lg text-slate-300 max-w-3xl mx-auto">
-              A look inside our 25,000 sqft facility and the advanced machinery that makes it all possible.
-            </p>
-          </div>
-
-          <!-- Side-by-Side Layout -->
-          <div class="grid md:grid-cols-2 gap-6">
-            <div 
-              @click="openLightbox('facility', 0)"
-              class="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer bg-slate-800"
-            >
-              <img 
-                src="../assets/manufacturingunit.jpg" 
-                alt="Manufacturing Facility"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent">
-                <div class="absolute bottom-6 left-6 right-6">
-                  <h3 class="text-2xl font-bold text-white mb-2">25,000 Sqft Facility</h3>
-                  <p class="text-slate-300">State-of-the-art manufacturing infrastructure</p>
-                </div>
-              </div>
-              <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400 rounded-2xl transition-colors duration-300"></div>
-            </div>
-
-            <div 
-              @click="openLightbox('facility', 1)"
-              class="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer bg-slate-800"
-            >
-              <img 
-                src="../assets/multicutmachine.jpg" 
-                alt="Multi Cut Machine"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent">
-                <div class="absolute bottom-6 left-6 right-6">
-                  <h3 class="text-2xl font-bold text-white mb-2">Multi Cut Machine</h3>
-                  <p class="text-slate-300">Advanced precision cutting technology</p>
-                </div>
-              </div>
-              <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400 rounded-2xl transition-colors duration-300"></div>
-            </div>
-          </div>
-
-          <div class="text-center mt-8">
-            <button 
-              @click="openLightbox('facility', 0)"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/30"
-            >
-              <span>View All Facility Images</span>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Final CTA Banner -->
-    <section class="py-20 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 relative overflow-hidden">
-      <!-- Animated Background Pattern -->
-      <div class="absolute inset-0 opacity-20">
+    <section class="py-16 md:py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-5">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="cta-dots" width="40" height="40" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="white"/>
+            <pattern id="cta-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#cta-dots)" />
+          <rect width="100%" height="100%" fill="url(#cta-grid)" />
         </svg>
       </div>
 
-      <div class="container mx-auto px-4 relative">
+      <!-- Gradient Orbs -->
+      <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
-          <div class="inline-block p-3 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <div class="inline-block p-3 bg-cyan-500/20 backdrop-blur-sm border border-cyan-400/30 rounded-full mb-6">
+            <svg class="w-10 h-10 md:w-12 md:h-12 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
             </svg>
           </div>
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-            Have a Complex Project?
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            Ready to Bring Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Vision to Life?</span>
           </h2>
-          <p class="text-xl text-white/90 mb-10 leading-relaxed">
-            We have the design expertise and fabrication power to build it.
+          <p class="text-lg sm:text-xl md:text-2xl text-slate-300 mb-8 md:mb-10 leading-relaxed">
+            From concept to completion, we engineer solutions that exceed expectations.
           </p>
           <router-link 
             to="/contact" 
-            class="inline-flex items-center gap-3 px-10 py-5 bg-white text-cyan-600 font-bold text-lg rounded-xl hover:bg-slate-50 transform hover:scale-105 transition-all duration-300 shadow-2xl"
+            class="inline-flex items-center gap-2 px-8 md:px-10 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all transform hover:scale-105 text-base md:text-lg shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50"
           >
-            <span>Contact Us for a Quote</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <span>Start Your Project</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
           </router-link>
@@ -363,21 +349,21 @@
     <Transition name="lightbox">
       <div 
         v-if="lightboxOpen" 
-        class="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm"
+        class="fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-sm"
         @click="closeLightbox"
       >
         <div class="absolute inset-0 flex flex-col">
           <!-- Header -->
-          <div class="flex items-center justify-between p-4 md:p-6 bg-gradient-to-b from-slate-900/80 to-transparent">
+          <div class="flex items-center justify-between p-4 md:p-6 bg-gradient-to-b from-slate-800/90 to-transparent">
             <div class="text-white">
-              <p class="text-sm text-slate-400">{{ currentCategory.toUpperCase() }}</p>
-              <p class="text-lg font-semibold">Image {{ currentImageIndex + 1 }} of {{ currentImages.length }}</p>
+              <p class="text-sm text-cyan-400 font-medium">{{ currentCategory.toUpperCase() }}</p>
+              <p class="text-lg font-semibold">{{ currentImageIndex + 1 }} of {{ currentImages.length }}</p>
             </div>
             <button 
               @click="closeLightbox"
-              class="w-12 h-12 bg-slate-800/80 hover:bg-slate-700 text-white rounded-full transition-colors flex items-center justify-center"
+              class="w-10 h-10 md:w-12 md:h-12 bg-slate-800/80 hover:bg-slate-700 text-white rounded-full transition-colors flex items-center justify-center border border-slate-600"
             >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </button>
@@ -387,9 +373,9 @@
           <div class="flex-1 flex items-center justify-center p-4 md:p-8" @click.stop>
             <button 
               @click="previousImage"
-              class="absolute left-4 w-14 h-14 bg-slate-800/80 hover:bg-slate-700 text-white rounded-full transition-colors flex items-center justify-center z-10"
+              class="absolute left-4 w-12 h-12 md:w-14 md:h-14 bg-slate-800/90 hover:bg-slate-700 text-white rounded-full transition-colors flex items-center justify-center z-10 border border-slate-600"
             >
-              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-6 h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
             </button>
@@ -398,29 +384,29 @@
               <img 
                 :src="getImagePath(currentImages[currentImageIndex])" 
                 :alt="`Image ${currentImageIndex + 1}`"
-                class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-slate-700"
               />
             </div>
 
             <button 
               @click="nextImage"
-              class="absolute right-4 w-14 h-14 bg-slate-800/80 hover:bg-slate-700 text-white rounded-full transition-colors flex items-center justify-center z-10"
+              class="absolute right-4 w-12 h-12 md:w-14 md:h-14 bg-slate-800/90 hover:bg-slate-700 text-white rounded-full transition-colors flex items-center justify-center z-10 border border-slate-600"
             >
-              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-6 h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
               </svg>
             </button>
           </div>
 
           <!-- Thumbnail Strip -->
-          <div class="p-4 md:p-6 bg-gradient-to-t from-slate-900/80 to-transparent">
+          <div class="p-4 md:p-6 bg-gradient-to-t from-slate-800/90 to-transparent">
             <div class="flex gap-2 overflow-x-auto pb-2 justify-center thumbnail-scrollbar">
               <div 
                 v-for="(image, index) in currentImages" 
                 :key="index"
                 @click.stop="currentImageIndex = index"
                 class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden cursor-pointer border-2 transition-all"
-                :class="index === currentImageIndex ? 'border-cyan-400 scale-110' : 'border-slate-700 opacity-60 hover:opacity-100'"
+                :class="index === currentImageIndex ? 'border-cyan-400 scale-110 shadow-lg shadow-cyan-500/30' : 'border-slate-600 opacity-60 hover:opacity-100 hover:border-slate-500'"
               >
                 <img 
                   :src="getImagePath(image)" 
@@ -588,7 +574,7 @@ export default {
 }
 
 .filmstrip-scrollbar::-webkit-scrollbar-track {
-  background: #cbd5e1;
+  background: #1e293b;
   border-radius: 4px;
 }
 
@@ -601,45 +587,23 @@ export default {
   background: linear-gradient(to right, #0891b2, #2563eb);
 }
 
-/* Masonry Grid */
-.masonry-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  grid-auto-rows: 200px;
-}
-
-.masonry-item:nth-child(3n + 1) {
-  grid-row: span 2;
-}
-
-.masonry-item:nth-child(3n + 2) {
-  grid-row: span 1;
-}
-
-.masonry-item:nth-child(3n + 3) {
-  grid-row: span 2;
-}
-
-@media (min-width: 768px) {
-  .masonry-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /* Thumbnail Scrollbar */
 .thumbnail-scrollbar::-webkit-scrollbar {
   height: 6px;
 }
 
 .thumbnail-scrollbar::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #334155;
   border-radius: 3px;
 }
 
 .thumbnail-scrollbar::-webkit-scrollbar-thumb {
   background: #06b6d4;
   border-radius: 3px;
+}
+
+.thumbnail-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
 }
 
 /* Lightbox Transition */
@@ -653,17 +617,22 @@ export default {
   opacity: 0;
 }
 
-/* Animations */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.3;
-  }
+/* Enhanced hover effects for better interactivity */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
 }
 
-.animate-pulse {
-  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* Smooth scrolling for better UX */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Custom snap scrolling */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
 }
 </style>
