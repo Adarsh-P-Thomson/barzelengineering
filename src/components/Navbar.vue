@@ -7,7 +7,7 @@
           <div class="bg-white rounded-lg p-2 shadow-lg transform group-hover:scale-105 transition-transform duration-300 shadow-cyan-500/20">
             <img src="../assets/logo.png" alt="Barzel Engineering Logo" class="h-8 w-auto">
           </div>
-          <div class="hidden sm:block">
+          <div>
             <h1 class="text-xl font-bold text-white">
               Barzel Engineering
             </h1>

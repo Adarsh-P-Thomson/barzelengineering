@@ -30,37 +30,66 @@
       </div>
 
       <!-- Hero Content -->
-      <div class="relative container mx-auto px-4 h-full flex items-center z-10">
-        <div class="max-w-5xl">
-          <div class="inline-block mb-6">
-            <span class="text-cyan-400 text-sm font-bold tracking-widest uppercase bg-cyan-400/10 px-4 py-2 rounded-full border border-cyan-400/30">
-              Engineering Excellence 
-            </span>
-          </div>
+      <div class="relative container mx-auto px-4 h-full flex items-center justify-center z-10">
+        <div class="max-w-5xl text-center">
           <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-4 leading-tight tracking-tight">
-            BARZEL<br/>ENGINEERING
+            BARZEL ENGINEERING
           </h1>
           <p class="text-xl sm:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-bold mb-6">
             Customize & Creative Packaging Solution
           </p>
-          <p class="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 leading-relaxed max-w-3xl">
+          <p class="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 leading-relaxed max-w-3xl mx-auto">
             Precision Fabrication for the Automotive, Railway, and Mining Industries.
           </p>
-          <p class="text-base sm:text-lg text-slate-400 mb-10 leading-relaxed max-w-3xl px-4 sm:px-0">
+          <p class="text-base sm:text-lg text-slate-400 mb-10 leading-relaxed max-w-3xl mx-auto">
             From concept to completion, we transform your toughest engineering challenges into reliable, high-performance solutions. With 25,000 sqft of advanced manufacturing capability and decades of industry expertise, we're the partner that delivers.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 px-4 sm:px-0">
+          
+          <!-- Quick Contact Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a 
+              href="tel:+919845065065" 
+              class="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-base sm:text-lg rounded-xl hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-green-500/50"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              <span>Call Now</span>
+            </a>
+            <a 
+              href="mailto:info@barzelengineering.com" 
+              class="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold text-base sm:text-lg rounded-xl hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-blue-500/50"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <span>Email Us</span>
+            </a>
             <router-link 
-              to="/services" 
+              to="/contact" 
+              class="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 font-bold text-base sm:text-lg rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 shadow-xl"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Contact Us</span>
+            </router-link>
+          </div>
+
+          <!-- Secondary Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              @click="scrollToSection('services')"
               class="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-base sm:text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyan-500/50"
             >
               <span>Explore Our Services</span>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
-            </router-link>
-            <router-link 
-              to="/our-work" 
+            </button>
+            <button 
+              @click="scrollToSection('our-work')"
               class="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white font-bold text-base sm:text-lg rounded-xl hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl"
             >
               <span>See Our Work</span>
@@ -68,7 +97,7 @@
                 <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                 <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
               </svg>
-            </router-link>
+            </button>
           </div>
         </div>
       </div>
@@ -82,7 +111,7 @@
     </section>
 
     <!-- Core Services Section -->
-    <section class="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="services" class="py-20 bg-slate-900 relative overflow-hidden">
       <!-- Background Decoration -->
       <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -156,15 +185,15 @@
         </div>
 
         <div class="text-center">
-          <router-link 
-            to="/services" 
+          <button 
+            @click="scrollToSection('technology')"
             class="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30"
           >
             <span>View All Services</span>
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
-          </router-link>
+          </button>
         </div>
       </div>
     </section>
@@ -283,7 +312,7 @@
     </section>
 
     <!-- About Us Snippet Section -->
-    <section class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
+    <section id="about" class="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
       <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
           <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -304,7 +333,7 @@
             </div>
 
             <!-- Right Column: Content -->
-            <div class="order-1 md:order-2">
+            <div class="order-1 md:order-2 text-center md:text-left">
               <div class="inline-block px-4 py-2 bg-cyan-500/10 rounded-full mb-4">
                 <span class="text-cyan-400 font-semibold text-sm tracking-wider uppercase">Who We Are</span>
               </div>
@@ -312,21 +341,23 @@
                 Engineering Excellence.<br/>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Trusted Partnership.</span>
               </h2>
-              <p class="text-base md:text-lg text-slate-300 leading-relaxed mb-6">
+              <p class="text-base md:text-lg text-slate-300 leading-relaxed mb-6 px-4 md:px-0">
                 Barzel Engineering specializes in designing, manufacturing, and fabricating specialized equipment and custom pallet solutions for the automotive industry and beyond.
               </p>
-              <p class="text-base md:text-lg text-slate-300 leading-relaxed mb-8">
+              <p class="text-base md:text-lg text-slate-300 leading-relaxed mb-8 px-4 md:px-0">
                 With a dedicated in-house design team and a 25,000 sqft facility, we are committed to innovation and collaborative product development to meet our clients' exact needs.
               </p>
-              <router-link 
-                to="/about" 
-                class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-slate-800 to-slate-900 text-white font-semibold text-base md:text-lg rounded-xl hover:from-slate-700 hover:to-slate-800 transition-all transform hover:scale-105 shadow-xl"
-              >
-                <span>Learn More About Us</span>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-              </router-link>
+              <div class="flex justify-center md:justify-start">
+                <router-link 
+                  to="/about" 
+                  class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-slate-800 to-slate-900 text-white font-semibold text-base md:text-lg rounded-xl hover:from-slate-700 hover:to-slate-800 transition-all transform hover:scale-105 shadow-xl"
+                >
+                  <span>Learn More About Us</span>
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
@@ -334,7 +365,7 @@
     </section>
 
     <!-- Advanced Machinery & Technology Section -->
-    <section class="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="technology" class="py-20 bg-slate-900 relative overflow-hidden">
       <!-- Background Decoration -->
       <div class="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -353,62 +384,31 @@
         </div>
 
         <div class="max-w-7xl mx-auto">
-          <!-- Main Featured Machine -->
-          <div class="mb-8 bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border-2 border-slate-700 hover:border-cyan-500/50 transition-all shadow-xl">
-            <div class="grid md:grid-cols-2 gap-0">
-              <div class="relative h-64 md:h-auto overflow-hidden">
+          <!-- Machine Grid - All 4 machines in one row -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Machine Card 1 - Laser Cutting -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-48 overflow-hidden">
                 <img 
                   src="../assets/lasercutting.png" 
                   alt="Laser Cutting Machine" 
-                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div class="absolute top-4 right-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  Precision Technology
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">Laser Cutting</h3>
                 </div>
               </div>
-              <div class="p-8 md:p-12 flex flex-col justify-center">
-                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
-                  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <h3 class="text-3xl font-bold text-white mb-4">Laser Cutting Technology</h3>
-                <p class="text-lg text-slate-300 leading-relaxed mb-4">
-                  Our advanced laser cutting systems deliver micron-level precision for complex geometries and intricate designs. Perfect for both prototypes and high-volume production.
+              <div class="p-4">
+                <p class="text-slate-300 text-sm mb-3">
+                  Micron-level precision for complex geometries and intricate designs.
                 </p>
-                <ul class="space-y-3 mb-6">
-                  <li class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-slate-300">High-speed cutting with minimal material waste</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-slate-300">Handles various materials: steel, aluminum, stainless steel</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-cyan-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-slate-300">CAD/CAM integration for seamless design-to-production</span>
-                  </li>
-                </ul>
-                <div class="inline-flex items-center text-cyan-600 font-semibold">
-                  <span>Learn more about our capabilities</span>
-                  <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                  </svg>
+                <div class="flex items-center text-cyan-400 font-semibold text-xs">
+                  <span>Precision Technology</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Machine Grid - Top 3 machines only -->
-          <div class="grid md:grid-cols-3 gap-6">
-            <!-- Machine Card 1 -->
+            <!-- Machine Card 2 - Welding -->
             <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
               <div class="relative h-48 overflow-hidden">
                 <img 
@@ -430,7 +430,7 @@
               </div>
             </div>
 
-            <!-- Machine Card 2 -->
+            <!-- Machine Card 3 - CNC Drilling -->
             <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
               <div class="relative h-48 overflow-hidden">
                 <img 
@@ -452,7 +452,7 @@
               </div>
             </div>
 
-            <!-- Machine Card 3 -->
+            <!-- Machine Card 4 - Powder Coating -->
             <div class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
               <div class="relative h-48 overflow-hidden">
                 <img 
@@ -475,30 +475,24 @@
             </div>
           </div>
 
-          <!-- CTA -->
-          <div class="mt-8 text-center bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 rounded-3xl p-6 md:p-12">
-            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
-              Want to See Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Facility?</span>
-            </h3>
-            <p class="text-base md:text-xl text-slate-300 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
-              Schedule a visit to witness our manufacturing capabilities firsthand.
-            </p>
-            <router-link 
-              to="/contact" 
-              class="inline-flex items-center gap-3 px-6 md:px-10 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-base md:text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/50"
+          <!-- Know More CTA -->
+          <div class="mt-12 text-center">
+            <button 
+              @click="scrollToSection('about')"
+              class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/50"
             >
-              <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              <span>Know More About Our Technology</span>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
-              <span>Schedule a Tour</span>
-            </router-link>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Our Work Showcase Section -->
-    <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white relative overflow-hidden">
+    <section id="our-work" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-5">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -526,7 +520,7 @@
         </div>
 
         <div class="max-w-6xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-6">
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Gallery Item 1 -->
             <div class="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer border border-slate-700 hover:border-cyan-500/50 transition-all">
               <img 
@@ -534,8 +528,8 @@
                 alt="Automotive Pallets" 
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-8">
-                <h3 class="text-2xl font-bold text-white">Automotive Pallets</h3>
+              <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                <h3 class="text-lg font-bold text-white">Automotive Pallets</h3>
               </div>
             </div>
 
@@ -546,8 +540,8 @@
                 alt="Heavy Fabrication" 
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-8">
-                <h3 class="text-2xl font-bold text-white">Heavy Fabrication</h3>
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                <h3 class="text-lg font-bold text-white">Heavy Fabrication</h3>
               </div>
             </div>
 
@@ -558,8 +552,8 @@
                 alt="Special Purpose Machines" 
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-cyan-800/90 via-cyan-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-8">
-                <h3 class="text-2xl font-bold text-white">Special Purpose Machines</h3>
+              <div class="absolute inset-0 bg-gradient-to-t from-cyan-800/90 via-cyan-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                <h3 class="text-lg font-bold text-white">Special Purpose Machines</h3>
               </div>
             </div>
 
@@ -570,29 +564,29 @@
                 alt="Industrial Solutions" 
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-blue-800/90 via-blue-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-8">
-                <h3 class="text-2xl font-bold text-white">Industrial Solutions</h3>
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-800/90 via-blue-800/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+                <h3 class="text-lg font-bold text-white">Industrial Solutions</h3>
               </div>
             </div>
           </div>
         </div>
 
         <div class="text-center mt-12">
-          <router-link 
-            to="/our-work" 
-            class="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/30"
+          <button 
+            @click="scrollToSection('clients')"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/50"
           >
             <span>Explore Our Full Gallery</span>
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
-          </router-link>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Client Trust Wall Section -->
-    <section class="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
+    <section id="clients" class="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800">
       <div class="container mx-auto px-4">
         <div class="text-center mb-10">
           <div class="inline-block px-4 py-2 bg-cyan-500/10 rounded-full mb-4">
@@ -619,21 +613,21 @@
         </div>
 
         <div class="text-center mt-8">
-          <router-link 
-            to="/clients" 
+          <button 
+            @click="scrollToSection('contact')"
             class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-base md:text-lg group"
           >
             <span>See Full Client List</span>
             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
-          </router-link>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Final CTA Banner -->
-    <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white relative overflow-hidden">
+    <section id="contact" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 text-white relative overflow-hidden">
       <!-- Animated Background Pattern -->
       <div class="absolute inset-0 opacity-10">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -767,6 +761,17 @@ export default {
         { name: 'Unipres', src: unipresLogo },
         { name: 'Force Motors', src: forceMotorsLogo }
       ]
+    }
+  },
+  methods: {
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   }
 }
