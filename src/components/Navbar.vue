@@ -1,54 +1,65 @@
 <template>
-  <nav class="bg-primary-600 text-white shadow-lg">
+  <nav class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white shadow-xl border-b border-slate-700/50">
     <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <div class="text-2xl font-bold">
-          <router-link to="/" class="hover:text-primary-200 transition-colors">
-            Barzel Engineering
-          </router-link>
-        </div>
+      <div class="flex justify-between items-center py-3">
+        <!-- Logo and Brand -->
+        <router-link to="/" class="flex items-center gap-3 group">
+          <div class="bg-white rounded-lg p-2 shadow-lg shadow-cyan-500/20 transform group-hover:scale-105 transition-transform duration-300">
+            <img src="../assets/logo.png" alt="Barzel Engineering Logo" class="h-8 w-auto">
+          </div>
+          <div class="hidden sm:block">
+            <h1 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+              Barzel Engineering
+            </h1>
+            <p class="text-[10px] text-slate-400 tracking-wider uppercase">Precision & Excellence</p>
+          </div>
+        </router-link>
         
         <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-6">
+        <div class="hidden md:flex items-center space-x-1">
           <router-link 
             to="/" 
-            class="hover:text-primary-200 transition-colors px-3 py-2 rounded"
-            :class="{ 'bg-primary-700': $route.path === '/' }"
+            class="relative px-4 py-2 rounded-lg text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium group"
+            :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/' }"
           >
-            Home
+            <span class="relative z-10">Home</span>
+            <span class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></span>
           </router-link>
           <router-link 
             to="/about" 
-            class="hover:text-primary-200 transition-colors px-3 py-2 rounded"
-            :class="{ 'bg-primary-700': $route.path === '/about' }"
+            class="relative px-4 py-2 rounded-lg text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium group"
+            :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/about' }"
           >
-            About Us
+            <span class="relative z-10">About Us</span>
+            <span class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></span>
           </router-link>
           <router-link 
             to="/services" 
-            class="hover:text-primary-200 transition-colors px-3 py-2 rounded"
-            :class="{ 'bg-primary-700': $route.path === '/services' }"
+            class="relative px-4 py-2 rounded-lg text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium group"
+            :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/services' }"
           >
-            Services
+            <span class="relative z-10">Services</span>
+            <span class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></span>
           </router-link>
           <router-link 
             to="/our-work" 
-            class="hover:text-primary-200 transition-colors px-3 py-2 rounded"
-            :class="{ 'bg-primary-700': $route.path === '/our-work' }"
+            class="relative px-4 py-2 rounded-lg text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium group"
+            :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/our-work' }"
           >
-            Our Work
+            <span class="relative z-10">Our Work</span>
+            <span class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></span>
           </router-link>
           <router-link 
             to="/clients" 
-            class="hover:text-primary-200 transition-colors px-3 py-2 rounded"
-            :class="{ 'bg-primary-700': $route.path === '/clients' }"
+            class="relative px-4 py-2 rounded-lg text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium group"
+            :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/clients' }"
           >
-            Clients
+            <span class="relative z-10">Clients</span>
+            <span class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></span>
           </router-link>
           <router-link 
             to="/contact" 
-            class="hover:text-primary-200 transition-colors px-3 py-2 rounded"
-            :class="{ 'bg-primary-700': $route.path === '/contact' }"
+            class="ml-2 px-5 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:from-cyan-400 hover:to-blue-400 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/30"
           >
             Contact Us
           </router-link>
@@ -57,9 +68,9 @@
         <!-- Mobile Menu Button -->
         <button 
           @click="mobileMenuOpen = !mobileMenuOpen"
-          class="md:hidden focus:outline-none"
+          class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-slate-800/50 transition-colors"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path 
               v-if="!mobileMenuOpen"
               stroke-linecap="round" 
@@ -79,45 +90,50 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden pb-4">
+      <div v-if="mobileMenuOpen" class="md:hidden pb-4 space-y-1 border-t border-slate-700/50 mt-2 pt-4">
         <router-link 
           to="/" 
-          class="block py-2 px-4 hover:bg-primary-700 rounded"
+          class="block py-2.5 px-4 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all font-medium"
+          :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/' }"
           @click="mobileMenuOpen = false"
         >
           Home
         </router-link>
         <router-link 
           to="/about" 
-          class="block py-2 px-4 hover:bg-primary-700 rounded"
+          class="block py-2.5 px-4 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all font-medium"
+          :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/about' }"
           @click="mobileMenuOpen = false"
         >
           About Us
         </router-link>
         <router-link 
           to="/services" 
-          class="block py-2 px-4 hover:bg-primary-700 rounded"
+          class="block py-2.5 px-4 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all font-medium"
+          :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/services' }"
           @click="mobileMenuOpen = false"
         >
           Services
         </router-link>
         <router-link 
           to="/our-work" 
-          class="block py-2 px-4 hover:bg-primary-700 rounded"
+          class="block py-2.5 px-4 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all font-medium"
+          :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/our-work' }"
           @click="mobileMenuOpen = false"
         >
           Our Work
         </router-link>
         <router-link 
           to="/clients" 
-          class="block py-2 px-4 hover:bg-primary-700 rounded"
+          class="block py-2.5 px-4 rounded-lg text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all font-medium"
+          :class="{ 'text-cyan-400 bg-slate-800/50': $route.path === '/clients' }"
           @click="mobileMenuOpen = false"
         >
           Clients
         </router-link>
         <router-link 
           to="/contact" 
-          class="block py-2 px-4 hover:bg-primary-700 rounded"
+          class="block py-2.5 px-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all mt-2 text-center shadow-lg shadow-cyan-500/30"
           @click="mobileMenuOpen = false"
         >
           Contact Us
