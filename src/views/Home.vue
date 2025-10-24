@@ -34,7 +34,7 @@
         <div class="max-w-5xl">
           <div class="inline-block mb-6">
             <span class="text-cyan-400 text-sm font-bold tracking-widest uppercase bg-cyan-400/10 px-4 py-2 rounded-full border border-cyan-400/30">
-              Engineering Excellence Since Inception
+              Engineering Excellence 
             </span>
           </div>
           <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-4 leading-tight tracking-tight">
