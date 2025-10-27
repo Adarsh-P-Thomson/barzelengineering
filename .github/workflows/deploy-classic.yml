@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages (Classic)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup deployment files
+        run: |
+          # Copy CNAME for custom domain
+          cp CNAME dist/
+          
+          # Create .nojekyll to bypass Jekyll processing
+          touch dist/.nojekyll
+          
+          # Create 404.html for SPA routing
+          cp dist/index.html dist/404.html
+          
+          # List files to verify
+          ls -la dist/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: barzelengineering.com

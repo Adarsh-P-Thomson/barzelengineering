@@ -1,9 +1,9 @@
+
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -21,31 +21,64 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Setup Node
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          
+          cache: npm
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build
         run: npm run build
-      
-      - name: Copy CNAME to dist
-        run: cp CNAME ./dist/CNAME
-        
-      - name: Copy .nojekyll to dist
-        run: cp ./public/.nojekyll ./dist/.nojekyll
-        
-      - name: Add SPA fallback (404 -> index.html)
-        run: cp ./dist/index.html ./dist/404.html
-        
+
+      - name: Setup deployment files
+        run: |
+          echo "Setting up deployment files..."
+          
+          # Verify dist directory exists
+          if [ ! -d "dist" ]; then
+            echo "Error: dist directory not found!"
+            exit 1
+          fi
+          
+          # Copy CNAME for custom domain
+          if [ -f "CNAME" ]; then
+            cp CNAME dist/
+            echo "✅ CNAME copied"
+          else
+            echo "⚠️ CNAME file not found"
+          fi
+          
+          # Create .nojekyll to bypass Jekyll processing
+          touch dist/.nojekyll
+          echo "✅ .nojekyll created"
+          
+          # Create 404.html for SPA routing
+          if [ -f "dist/index.html" ]; then
+            cp dist/index.html dist/404.html
+            echo "✅ 404.html created"
+          else
+            echo "❌ index.html not found in dist!"
+            exit 1
+          fi
+          
+          # List files to verify
+          echo "📁 Files in dist directory:"
+          ls -la dist/
+          
+          # Verify critical files exist
+          echo "🔍 Verifying critical files:"
+          [ -f "dist/index.html" ] && echo "✅ index.html exists" || echo "❌ index.html missing"
+          [ -f "dist/404.html" ] && echo "✅ 404.html exists" || echo "❌ 404.html missing"
+          [ -f "dist/.nojekyll" ] && echo "✅ .nojekyll exists" || echo "❌ .nojekyll missing"
+          [ -f "dist/CNAME" ] && echo "✅ CNAME exists" || echo "⚠️ CNAME missing"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
