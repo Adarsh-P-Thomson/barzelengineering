@@ -1,57 +1,69 @@
-name: Deploy to GitHub Pages
+
+name: Deploy Vite-Vue SPA to GitHub Pages
 
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main # This workflow runs when changes are pushed to the 'main' branch
+  workflow_dispatch: # Allows you to manually trigger the workflow from the GitHub UI
 
+# Sets permissions to allow the GITHUB_TOKEN to deploy to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the start and latest queued.
+# However, this doesn't restrict parallel runs for different branches.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout your repository
         uses: actions/checkout@v4
-        
-      - name: Setup Node
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-          
+          node-version: 20 # Using Node.js v20 (or any recent LTS version like 18)
+          cache: 'npm' # Caches npm dependencies to speed up subsequent runs
+
       - name: Install dependencies
-        run: npm ci
-        
-      - name: Build
+        run: npm ci # 'npm ci' is preferred over 'npm install' in CI/CD environments
+
+      - name: Build Vite Project
+        # This command runs your build script (defined in package.json)
+        # It typically outputs optimized files into the 'dist' directory.
         run: npm run build
-      
-      - name: Add SPA fallback (404 -> index.html)
-        run: cp ./dist/index.html ./dist/404.html
-        
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
-      - name: Upload artifact
+
+      - name: Add SPA fallback (404.html to index.html)
+        # This is CRUCIAL for Single Page Applications (SPAs) on GitHub Pages
+        # It copies the main index.html to 404.html.
+        # When a user navigates directly to a sub-route (e.g., /about),
+        # GitHub Pages serves the 404.html, which loads your Vue app,
+        # and then Vue Router takes over to render the correct component.
+        run: cp dist/index.html dist/404.html
+
+      - name: Upload artifact for GitHub Pages
+        # This action uploads the contents of your build directory as an artifact.
+        # The 'deploy' job will later pick up this artifact.
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: './dist' # Specifies that the 'dist' directory is the one to upload
 
+  # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build # This job depends on the 'build' job completing successfully
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # This action performs the actual deployment to GitHub Pages
