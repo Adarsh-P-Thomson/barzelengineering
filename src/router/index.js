@@ -4,6 +4,7 @@ import AboutUs from '../views/AboutUs.vue'
 import Services from '../views/Services.vue'
 import OurWork from '../views/OurWork.vue'
 import Clients from '../views/Clients.vue'
+import Machinery from '../views/Machinery.vue'
 import ContactUs from '../views/ContactUs.vue'
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: '/clients',
     name: 'Clients',
     component: Clients
+  },
+  {
+    path: '/machinery',
+    name: 'Machinery',
+    component: Machinery
   },
   {
     path: '/contact',

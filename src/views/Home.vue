@@ -2,13 +2,24 @@
   <div class="min-h-screen overflow-x-hidden">
     <!-- Hero Section: The Hook -->
     <section class="relative h-screen min-h-[700px] overflow-hidden">
-      <!-- Background Image -->
+      <!-- Background Image Carousel -->
       <div class="absolute inset-0">
-        <img 
-          src="../assets/homebg.jpg" 
-          alt="Barzel Engineering Manufacturing" 
-          class="w-full h-full object-cover object-center"
-        />
+        <!-- Image Slides -->
+        <transition-group name="hero-fade" tag="div" class="relative w-full h-full">
+          <div
+            v-for="(image, index) in heroImages" 
+            :key="image.src"
+            v-show="currentImageIndex === index"
+            class="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center"
+          >
+            <img 
+              :src="image.src" 
+              :alt="image.alt" 
+              class="min-w-full min-h-full object-cover object-center"
+              style="transform: translateY(15%);"
+            />
+          </div>
+        </transition-group>
         <!-- Dark Overlay with gradient -->
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/85 to-cyan-900/80"></div>
         
@@ -42,7 +53,7 @@
             Precision Fabrication for the Automotive, Railway, and Mining Industries.
           </p>
           <p class="text-base sm:text-lg text-slate-400 mb-10 leading-relaxed max-w-3xl mx-auto">
-            From concept to completion, we transform your toughest engineering challenges into reliable, high-performance solutions. With 25,000 sqft of advanced manufacturing capability and decades of industry expertise, we're the partner that delivers.
+            From concept to completion, we transform your toughest engineering challenges into reliable, high-performance solutions. With 35,000 sqft of advanced manufacturing capability and decades of industry expertise, we're the partner that delivers.
           </p>
           
           <!-- Quick Contact Buttons -->
@@ -330,7 +341,7 @@
         <!-- Stats Bar -->
         <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           <div class="text-center">
-            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">25K+</div>
+            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">35K+</div>
             <div class="text-slate-300 font-semibold">sqft Facility</div>
           </div>
           <div class="text-center">
@@ -338,7 +349,7 @@
             <div class="text-slate-300 font-semibold">Projects Delivered</div>
           </div>
           <div class="text-center">
-            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">15+</div>
+            <div class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">10+</div>
             <div class="text-slate-300 font-semibold">Industry Leaders</div>
           </div>
           <div class="text-center">
@@ -364,7 +375,7 @@
                   class="relative w-full h-auto rounded-2xl shadow-2xl"
                 />
                 <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-cyan-500 to-blue-500 text-white p-8 rounded-2xl shadow-2xl">
-                  <div class="text-5xl font-bold">25K</div>
+                  <div class="text-5xl font-bold">35K</div>
                   <div class="text-sm">sqft Facility</div>
                 </div>
               </div>
@@ -422,8 +433,8 @@
         </div>
 
         <div class="max-w-7xl mx-auto">
-          <!-- Machine Grid - All 4 machines in one row -->
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Machine Grid - 2 rows of 4 machines -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Machine Card 1 - Laser Cutting -->
             <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
               <div class="relative h-48 overflow-hidden">
@@ -511,15 +522,103 @@
                 </div>
               </div>
             </div>
+
+            <!-- Machine Card 5 - Bandshaw -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src="../assets/bandshawmachine.jpg" 
+                  alt="Bandshaw Machine" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">Bandshaw Cutting</h3>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-slate-300 text-sm mb-3">
+                  Efficient metal cutting for various materials and thickness.
+                </p>
+                <div class="flex items-center text-cyan-400 font-semibold text-xs">
+                  <span>Heavy-duty cutting</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 6 - Compressor -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src="../assets/compressormachine.png" 
+                  alt="Air Compressor" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">Air Compressor</h3>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-slate-300 text-sm mb-3">
+                  High-capacity compressed air for pneumatic tools and operations.
+                </p>
+                <div class="flex items-center text-cyan-400 font-semibold text-xs">
+                  <span>Power generation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 7 - Multicut -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src="../assets/multicutmachine.jpg" 
+                  alt="Multicut Machine" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">Multi-Cut Machine</h3>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-slate-300 text-sm mb-3">
+                  Versatile cutting system for complex fabrication requirements.
+                </p>
+                <div class="flex items-center text-cyan-400 font-semibold text-xs">
+                  <span>Multi-function</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Machine Card 8 - CNC Bending Machine -->
+            <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2">
+              <div class="relative h-48 overflow-hidden">
+                <img 
+                  src="../assets/shopfloormachinery.png" 
+                  alt="CNC Bending Machine" 
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-4">
+                  <h3 class="text-lg font-bold text-white">CNC Bending</h3>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-slate-300 text-sm mb-3">
+                  Precision angle bending and sheet metal forming capabilities.
+                </p>
+                <div class="flex items-center text-cyan-400 font-semibold text-xs">
+                  <span>Advanced forming</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Know More CTA -->
           <div class="mt-12 text-center">
             <router-link 
-              to="/services"
+              to="/machinery"
               class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-cyan-500/50"
             >
-              <span>Know More About Our Technology</span>
+              <span>Explore All Our Machinery</span>
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
@@ -636,10 +735,10 @@
         </div>
 
         <!-- Client Logos Marquee -->
-        <div class="relative overflow-hidden bg-slate-700/50 backdrop-blur-sm rounded-3xl shadow-xl p-6 border border-slate-600">
+        <div class="relative overflow-hidden bg-slate-700/50 backdrop-blur-sm rounded-3xl shadow-xl p-8 border border-slate-600">
           <div class="flex animate-scroll">
-            <div v-for="i in 2" :key="i" class="flex gap-8 px-4">
-              <div v-for="client in clients" :key="`${i}-${client.name}`" class="flex-shrink-0 bg-slate-700/50 backdrop-blur-sm rounded-xl p-4 border border-slate-600 hover:shadow-xl hover:border-cyan-500/50 transition-all w-40 h-24 flex items-center justify-center group">
+            <div v-for="i in 2" :key="i" class="flex gap-12 px-6">
+              <div v-for="client in clients" :key="`${i}-${client.name}`" class="flex-shrink-0 bg-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600 hover:shadow-xl hover:border-cyan-500/50 transition-all w-56 h-32 flex items-center justify-center group">
                 <img 
                   :src="client.src" 
                   :alt="client.name + ' Logo'"
@@ -660,6 +759,46 @@
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
             </svg>
           </router-link>
+        </div>
+
+        <!-- Partnership Banner -->
+        <div class="mt-12 max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-slate-800/80 via-cyan-900/40 to-slate-800/80 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-6 md:p-8">
+            <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              <div class="flex-shrink-0">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-400/30 w-32 h-20 md:w-40 md:h-24 flex items-center justify-center">
+                  <img 
+                    :src="crestLashingLogo" 
+                    alt="Crest Lashing Logo"
+                    class="max-w-full max-h-full object-contain filter brightness-95"
+                  />
+                </div>
+              </div>
+              <div class="flex-1 text-center md:text-left">
+                <div class="inline-block px-3 py-1 bg-cyan-500/20 rounded-full mb-2">
+                  <span class="text-cyan-400 font-semibold text-xs uppercase tracking-wider">Strategic Partnership</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-white mb-2">
+                  Proud Partner of <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Crest Lashing</span>
+                </h3>
+                <p class="text-slate-300 text-sm md:text-base mb-3">
+                  Collaborating to deliver innovative solutions in cargo securing and industrial packaging.
+                </p>
+                <a 
+                  href="https://crestlashing.com/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors group"
+                >
+                  <span>Visit Crest Lashing</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -756,7 +895,7 @@
           </div>
 
           <p class="text-slate-400 mt-8 text-sm">
-            Join 15+ industry leaders who trust Barzel Engineering for their critical manufacturing needs
+            Join 10+ industry leaders who trust Barzel Engineering for their critical manufacturing needs
           </p>
         </div>
       </div>
@@ -766,42 +905,66 @@
 
 <script>
 // Import all client logos statically
-import fordLogo from '../assets/ford.jpg'
-import gestampLogo from '../assets/Gestamp.svg'
-import geLogo from '../assets/general-electric.png'
-import apolloLogo from '../assets/ApolloLogo.jpg'
-import heatControlLogo from '../assets/HeatAndControlLogo.png'
-import tennecoLogo from '../assets/tenneco.png'
-import mrfLogo from '../assets/mrf.png'
-import nissanLogo from '../assets/nissan.jpg'
-import jaiLogo from '../assets/JAI Logo.png'
-import salcompLogo from '../assets/salcomp logo.png'
-import reepLogo from '../assets/REEP-MOTORS-LOGO.png'
-import unipresLogo from '../assets/unipres-logo.png'
-import forceMotorsLogo from '../assets/forcemotors.jpg'
+import ashokLeylandLogo from '../assets/ashok-leyland.png'
+import kirloskarLogo from '../assets/kirloskar-logo.png'
+import royalEnfieldLogo from '../assets/Royal-Enfield-Logo.png'
+import psaLogo from '../assets/PSA_groupe.jpg'
+import axileIndiaLogo from '../assets/axles_india.jpeg'
+import tvsLogo from '../assets/tvs.png'
+import jkTyreLogo from '../assets/GY4ZUwib_400x400.jpg'
+import girLogisticsLogo from '../assets/GIR Logistics.jpg'
+import indocoolLogo from '../assets/indocool.png'
+import magicAislesLogo from '../assets/magic_aisles.jpg'
+import crestLashingLogo from '../assets/crestlashing.png'
+
+// Import hero images
+import heroImage1 from '../assets/homebg.jpg'
+import heroImage2 from '../assets/home_hero_floor_with_machinery.png'
+import heroImage3 from '../assets/home_hero_section_our_work.png'
 
 export default {
   name: 'Home',
   data() {
     return {
+      currentImageIndex: 0,
+      heroImages: [
+        { src: heroImage1, alt: 'Barzel Engineering Manufacturing Facility' },
+        { src: heroImage2, alt: 'Manufacturing Floor with Advanced Machinery' },
+        { src: heroImage3, alt: 'Our Work and Fabrication Excellence' }
+      ],
+      carouselInterval: null,
+      crestLashingLogo,
       clients: [
-        { name: 'Ford', src: fordLogo },
-        { name: 'Gestamp', src: gestampLogo },
-        { name: 'GE', src: geLogo },
-        { name: 'Apollo', src: apolloLogo },
-        { name: 'Nissan', src: nissanLogo },
-        { name: 'MRF', src: mrfLogo },
-        { name: 'Tenneco', src: tennecoLogo },
-        { name: 'Heat & Control', src: heatControlLogo },
-        { name: 'JAI', src: jaiLogo },
-        { name: 'Salcomp', src: salcompLogo },
-        { name: 'Reep Industries', src: reepLogo },
-        { name: 'Unipres', src: unipresLogo },
-        { name: 'Force Motors', src: forceMotorsLogo }
+        { name: 'Ashok Leyland', src: ashokLeylandLogo },
+        { name: 'Kirloskar', src: kirloskarLogo },
+        { name: 'Royal Enfield', src: royalEnfieldLogo },
+        { name: 'PSA', src: psaLogo },
+        { name: 'Axile India', src: axileIndiaLogo },
+        { name: 'TVS', src: tvsLogo },
+        { name: 'JK Tyre', src: jkTyreLogo },
+        { name: 'GIR Logistics', src: girLogisticsLogo },
+        { name: 'Indocool', src: indocoolLogo },
+        { name: 'Magic Aisles', src: magicAislesLogo }
       ]
     }
   },
+  mounted() {
+    this.startCarousel()
+  },
+  beforeUnmount() {
+    this.stopCarousel()
+  },
   methods: {
+    startCarousel() {
+      this.carouselInterval = setInterval(() => {
+        this.currentImageIndex = (this.currentImageIndex + 1) % this.heroImages.length
+      }, 5000) // Change image every 5 seconds
+    },
+    stopCarousel() {
+      if (this.carouselInterval) {
+        clearInterval(this.carouselInterval)
+      }
+    },
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -845,6 +1008,24 @@ export default {
   animation: bounce 2s infinite;
 }
 
+/* Hero Image Carousel Transitions */
+.hero-fade-enter-active,
+.hero-fade-leave-active {
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-fade-enter-from {
+  opacity: 0;
+}
+
+.hero-fade-leave-to {
+  opacity: 0;
+}
+
+.hero-fade-enter-to {
+  opacity: 1;
+}
+
 /* Client Logo Marquee Animation */
 @keyframes scroll {
   0% {
@@ -861,5 +1042,33 @@ export default {
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Ensure images are responsive and fluid */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fluid responsive design for various resolutions */
+@media (max-width: 640px) {
+  .hero-fade-enter-active,
+  .hero-fade-leave-active {
+    transition: opacity 1s ease-in-out;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-fade-enter-active,
+  .hero-fade-leave-active {
+    transition: opacity 1.2s ease-in-out;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-fade-enter-active,
+  .hero-fade-leave-active {
+    transition: opacity 1.5s ease-in-out;
+  }
 }
 </style>

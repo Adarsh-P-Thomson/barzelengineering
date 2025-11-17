@@ -39,6 +39,13 @@
             Services
           </router-link>
           <router-link 
+            to="/machinery" 
+            class="relative px-4 py-2 rounded-lg text-slate-300 hover:bg-slate-700 hover:text-cyan-400 transition-all duration-300 font-medium"
+            :class="{ 'bg-slate-700 text-cyan-400': $route.path === '/machinery' }"
+          >
+            Machinery
+          </router-link>
+          <router-link 
             to="/our-work" 
             class="relative px-4 py-2 rounded-lg text-slate-300 hover:bg-slate-700 hover:text-cyan-400 transition-all duration-300 font-medium"
             :class="{ 'bg-slate-700 text-cyan-400': $route.path === '/our-work' }"
@@ -109,6 +116,14 @@
           @click="mobileMenuOpen = false"
         >
           Services
+        </router-link>
+        <router-link 
+          to="/machinery" 
+          class="block py-2.5 px-4 rounded-lg text-slate-300 hover:bg-slate-700 hover:text-cyan-400 transition-all font-medium"
+          :class="{ 'bg-slate-700 text-cyan-400': $route.path === '/machinery' }"
+          @click="mobileMenuOpen = false"
+        >
+          Machinery
         </router-link>
         <router-link 
           to="/our-work" 

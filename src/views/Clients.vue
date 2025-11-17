@@ -103,9 +103,9 @@
           </div>
 
           <!-- Client Grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 justify-items-center">
             <div v-for="client in clients" :key="client.name" 
-                 class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg md:rounded-xl p-4 md:p-6 hover:bg-gradient-to-br hover:from-cyan-500/10 hover:to-blue-500/10 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1">
+                 class="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg md:rounded-xl p-4 md:p-6 hover:bg-gradient-to-br hover:from-cyan-500/10 hover:to-blue-500/10 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1 w-full max-w-[200px]">
               <div class="flex flex-col items-center justify-center h-20 md:h-24 space-y-3">
                 <!-- Logo Image -->
                 <div v-if="client.src" class="w-full h-12 md:h-16 flex items-center justify-center">
@@ -134,7 +134,7 @@
           <!-- Stats Section -->
           <div class="grid sm:grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-16">
             <div class="text-center p-4 md:p-6 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700">
-              <div class="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-1 md:mb-2">13+</div>
+              <div class="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-1 md:mb-2">10+</div>
               <div class="text-slate-400 font-medium text-sm md:text-base">Major OEM Partners</div>
             </div>
             <div class="text-center p-4 md:p-6 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700">
@@ -144,6 +144,46 @@
             <div class="text-center p-4 md:p-6 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700 sm:col-span-3 md:col-span-1">
               <div class="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-1 md:mb-2">Pan-India</div>
               <div class="text-slate-400 font-medium text-sm md:text-base">Service Coverage</div>
+            </div>
+          </div>
+
+          <!-- Partnership Banner -->
+          <div class="mt-12 md:mt-16">
+            <div class="bg-gradient-to-r from-slate-800/80 via-cyan-900/40 to-slate-800/80 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-6 md:p-8">
+              <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                <div class="flex-shrink-0">
+                  <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-400/30 w-32 h-20 md:w-40 md:h-24 flex items-center justify-center">
+                    <img 
+                      :src="crestLashingLogo" 
+                      alt="Crest Lashing Logo"
+                      class="max-w-full max-h-full object-contain filter brightness-95"
+                    />
+                  </div>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                  <div class="inline-block px-3 py-1 bg-cyan-500/20 rounded-full mb-2">
+                    <span class="text-cyan-400 font-semibold text-xs uppercase tracking-wider">Strategic Partnership</span>
+                  </div>
+                  <h3 class="text-xl md:text-2xl font-bold text-white mb-2">
+                    Proud Partner of <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Crest Lashing</span>
+                  </h3>
+                  <p class="text-slate-300 text-sm md:text-base mb-3">
+                    Collaborating to deliver innovative solutions in cargo securing and industrial packaging.
+                  </p>
+                  <a 
+                    href="https://crestlashing.com/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors group"
+                  >
+                    <span>Visit Crest Lashing</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -277,37 +317,32 @@
 import { ref, onMounted } from 'vue'
 
 // Import all client logos statically
-import fordLogo from '../assets/ford.jpg'
-import gestampLogo from '../assets/Gestamp.svg'
-import geLogo from '../assets/general-electric.png'
-import apolloLogo from '../assets/ApolloLogo.jpg'
-import heatControlLogo from '../assets/HeatAndControlLogo.png'
-import tennecoLogo from '../assets/tenneco.png'
-import mrfLogo from '../assets/mrf.png'
-import nissanLogo from '../assets/nissan.jpg'
-import jaiLogo from '../assets/JAI Logo.png'
-import salcompLogo from '../assets/salcomp logo.png'
-import reepLogo from '../assets/REEP-MOTORS-LOGO.png'
-import unipresLogo from '../assets/unipres-logo.png'
-import forceMotorsLogo from '../assets/forcemotors.jpg'
+import ashokLeylandLogo from '../assets/ashok-leyland.png'
+import kirloskarLogo from '../assets/kirloskar-logo.png'
+import royalEnfieldLogo from '../assets/Royal-Enfield-Logo.png'
+import psaLogo from '../assets/PSA_groupe.jpg'
+import axileIndiaLogo from '../assets/axles_india.jpeg'
+import tvsLogo from '../assets/tvs.png'
+import jkTyreLogo from '../assets/GY4ZUwib_400x400.jpg'
+import girLogisticsLogo from '../assets/GIR Logistics.jpg'
+import indocoolLogo from '../assets/indocool.png'
+import magicAislesLogo from '../assets/magic_aisles.jpg'
+import crestLashingLogo from '../assets/crestlashing.png'
 
 export default {
   name: 'Clients',
   setup() {
     const clients = [
-      { name: 'Ford', logo: 'ford.jpg', src: fordLogo },
-      { name: 'Gestamp', logo: 'Gestamp.svg', src: gestampLogo },
-      { name: 'GE', logo: 'general-electric.png', src: geLogo },
-      { name: 'Apollo', logo: 'ApolloLogo.jpg', src: apolloLogo },
-      { name: 'Heat and Control', logo: 'HeatAndControlLogo.png', src: heatControlLogo },
-      { name: 'Tenneco', logo: 'tenneco.png', src: tennecoLogo },
-      { name: 'MRF', logo: 'mrf.png', src: mrfLogo },
-      { name: 'Nissan', logo: 'nissan.jpg', src: nissanLogo },
-      { name: 'JAI', logo: 'JAI Logo.png', src: jaiLogo },
-      { name: 'Salcomp', logo: 'salcomp logo.png', src: salcompLogo },
-      { name: 'Reep Industries', logo: 'REEP-MOTORS-LOGO.png', src: reepLogo },
-      { name: 'Unipres', logo: 'unipres-logo.png', src: unipresLogo },
-      { name: 'Force Motors', logo: 'forcemotors.jpg', src: forceMotorsLogo }
+      { name: 'Ashok Leyland', src: ashokLeylandLogo },
+      { name: 'Kirloskar', src: kirloskarLogo },
+      { name: 'Royal Enfield', src: royalEnfieldLogo },
+      { name: 'PSA', src: psaLogo },
+      { name: 'Axile India', src: axileIndiaLogo },
+      { name: 'TVS', src: tvsLogo },
+      { name: 'JK Tyre', src: jkTyreLogo },
+      { name: 'GIR Logistics', src: girLogisticsLogo },
+      { name: 'Indocool', src: indocoolLogo },
+      { name: 'Magic Aisles', src: magicAislesLogo }
     ]
 
     const regions = [
@@ -320,6 +355,7 @@ export default {
     ]
 
     return {
+      crestLashingLogo,
       clients,
       regions
     }
